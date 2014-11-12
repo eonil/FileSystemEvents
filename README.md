@@ -15,6 +15,8 @@ How To Use
 
 Here's example code which waits for first event, print it and quits.
 
+````Objective-C
+
 	dispatch_queue_t		q1		=	dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0);
 	dispatch_semaphore_t	sema1	=	dispatch_semaphore_create(0);
 
@@ -26,7 +28,7 @@ Here's example code which waits for first event, print it and quits.
 	NSLog(@"%@", s1);
 	dispatch_semaphore_wait(sema1, DISPATCH_TIME_FOREVER);
 
-
+````
 
 
 Use `EonilFileSystemEventStream` class. Required informations are
