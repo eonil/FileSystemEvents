@@ -26,7 +26,7 @@ does everything needed to setup.
 
 ````
 
-See TestdriveApp for Swift example.
+See `TestdriveApp` target for Swift example.
 
 Use `EonilFileSystemEventStream` class. Required informations are
 all noted as comments. Follows strict Objective-C conventions, so
