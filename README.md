@@ -10,6 +10,7 @@ Mainly written in Objective-C due to lack of support from Swift.
 
 
 
+
 How To Use
 ----------
 
@@ -43,3 +44,19 @@ You will get useful assertions when you compile in debug mode.
 These kind of assertions are essential in Objective-C to build 
 robust program, so I strongly recommend to use debug mode compile
 when you are writing up.
+
+
+
+
+
+Notes
+-----
+This library has been tested on OSX 10.10 with Xcode 6.1.
+Licensed under MIT license.
+
+
+
+
+
+
+
