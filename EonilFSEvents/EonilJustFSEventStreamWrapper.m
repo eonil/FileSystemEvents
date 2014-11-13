@@ -9,8 +9,6 @@
 #import "EonilJustFSEventStreamWrapper.h"
 
 
-
-
 static void
 TheFSEventStreamCallback(ConstFSEventStreamRef streamRef,
 						 void *clientCallBackInfo,
@@ -19,6 +17,17 @@ TheFSEventStreamCallback(ConstFSEventStreamRef streamRef,
 						 const FSEventStreamEventFlags eventFlags[],
 						 const FSEventStreamEventId eventIds[]
 						 );
+
+
+
+static inline BOOL isArrayOfString(NSArray* a) {
+	for (NSObject* s in a) {
+		if ([s isKindOfClass:[NSString class]] == NO) {
+			return	NO;
+		}
+	}
+	return	YES;
+}
 
 
 
@@ -41,18 +50,23 @@ TheFSEventStreamCallback(ConstFSEventStreamRef streamRef,
 
 	////
 	
+	NSAssert(callback != nil, @"Parameter `callback` shouldn't be `nil`.");
+	NSAssert([pathsToWatch isKindOfClass:[NSArray class]], @"Parameter `pathsToWatch` must be an array.");
+	NSAssert(isArrayOfString(pathsToWatch), @"Parameter `pathsToWatch` must be an array of `NSString`.");
+	
+	////
+	
 	self	=	[super init];
 	if (self) {
-		
-		FSEventStreamContext	ctx1;
+		FSEventStreamContext	ctx1	=	{0};
 		ctx1.info				=	(__bridge void*)self;
 		ctx1.copyDescription	=	NULL;
 		ctx1.release			=	NULL;
-		ctx1.release			=	NULL;
+		ctx1.retain				=	NULL;
 		ctx1.version			=	0;
 		
-		_raw		=	FSEventStreamCreate(NULL, &TheFSEventStreamCallback, &ctx1, (__bridge CFArrayRef)pathsToWatch, sinceWhen, latency, flags);
-		_callback	=	callback;
+		_raw			=	FSEventStreamCreate(NULL, &TheFSEventStreamCallback, &ctx1, (__bridge CFArrayRef)pathsToWatch, sinceWhen, latency, flags);
+		_callback		=	callback;
 		
 		if (_raw == nil) {
 			@throw [NSException exceptionWithName:@"EonilJustFSEventStreamWrapper" reason:@"Could not create a `FSEventStreamRef` object instance. Reason unknown." userInfo:nil];

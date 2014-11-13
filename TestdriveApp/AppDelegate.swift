@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import EonilFileSystemEvents
+//import EonilFileSystemEvents
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource, NSTableViewDelegate {
@@ -53,7 +53,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource, NSTab
 				self.tableView.scrollToEndOfDocument(self)
 			})
 		}
-		monitor	=	EonilFileSystemEventStream(callback: onEvents, pathsToWatch: ["/"], watchRoot: false, queue: queue)
+		monitor	=	EonilFileSystemEventStream(callback: onEvents, pathsToWatch: ["/", "/Users"], latency:0, watchRoot: false, queue: queue)
 		/////////////////////////////////////////////////////////////////
 		//	Here's the core of example.
 		/////////////////////////////////////////////////////////////////

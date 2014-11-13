@@ -7,30 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		45402A821A15379200127E50 /* EonilFileSystemEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BF99931A130C55004E4E2E /* EonilFileSystemEvents.framework */; };
-		45BF99991A130C55004E4E2E /* EonilFileSystemEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 45BF99981A130C55004E4E2E /* EonilFileSystemEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		45BF999F1A130C55004E4E2E /* EonilFileSystemEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BF99931A130C55004E4E2E /* EonilFileSystemEvents.framework */; };
-		45BF99A61A130C55004E4E2E /* EonilFSEventsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BF99A51A130C55004E4E2E /* EonilFSEventsTests.m */; };
-		45BF99B31A130C6D004E4E2E /* EonilJustFSEventStreamWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 45BF99B11A130C6D004E4E2E /* EonilJustFSEventStreamWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		45BF99B41A130C6D004E4E2E /* EonilJustFSEventStreamWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BF99B21A130C6D004E4E2E /* EonilJustFSEventStreamWrapper.m */; };
-		45BF99B61A130CBD004E4E2E /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BF99B51A130CBD004E4E2E /* CoreServices.framework */; };
-		45BF99BF1A131987004E4E2E /* EonilFileSystemEventStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 45BF99BD1A131987004E4E2E /* EonilFileSystemEventStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		45BF99C01A131987004E4E2E /* EonilFileSystemEventStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BF99BE1A131987004E4E2E /* EonilFileSystemEventStream.m */; };
 		45BF99CA1A131E3A004E4E2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF99C91A131E3A004E4E2E /* AppDelegate.swift */; };
 		45BF99CC1A131E3A004E4E2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45BF99CB1A131E3A004E4E2E /* Images.xcassets */; };
 		45BF99CF1A131E3A004E4E2E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45BF99CD1A131E3A004E4E2E /* MainMenu.xib */; };
 		45BF99DB1A131E3A004E4E2E /* TestdriveAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF99DA1A131E3A004E4E2E /* TestdriveAppTests.swift */; };
-		45BF99E21A131E3F004E4E2E /* EonilFileSystemEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BF99931A130C55004E4E2E /* EonilFileSystemEvents.framework */; };
+		45D9707A1A155D520037649F /* EonilFileSystemEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 45D970791A155D520037649F /* EonilFileSystemEvents.h */; };
+		45D9707C1A155D520037649F /* EonilFileSystemEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D9707B1A155D520037649F /* EonilFileSystemEvents.m */; };
+		45D970821A155D520037649F /* libEonilFileSystemEvents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D970771A155D520037649F /* libEonilFileSystemEvents.a */; };
+		45D970901A155D780037649F /* EonilFileSystemEventStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BF99BE1A131987004E4E2E /* EonilFileSystemEventStream.m */; };
+		45D970911A155D780037649F /* EonilJustFSEventStreamWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BF99B21A130C6D004E4E2E /* EonilJustFSEventStreamWrapper.m */; };
+		45D970991A155DD50037649F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D970981A155DD50037649F /* main.m */; };
+		45D9709F1A155E700037649F /* EonilFileSystemEventStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BF99BE1A131987004E4E2E /* EonilFileSystemEventStream.m */; };
+		45D970A01A155E700037649F /* EonilJustFSEventStreamWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BF99B21A130C6D004E4E2E /* EonilJustFSEventStreamWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		45BF99A01A130C55004E4E2E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 45BF998A1A130C55004E4E2E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 45BF99921A130C55004E4E2E;
-			remoteInfo = EonilFSEvents;
-		};
 		45BF99D51A131E3A004E4E2E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 45BF998A1A130C55004E4E2E /* Project object */;
@@ -38,15 +29,42 @@
 			remoteGlobalIDString = 45BF99C41A131E3A004E4E2E;
 			remoteInfo = TestdriveApp;
 		};
+		45D970831A155D520037649F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45BF998A1A130C55004E4E2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45D970761A155D520037649F;
+			remoteInfo = EonilFileSystemEvents;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		45D970941A155DD50037649F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		45EB2A5F1A155AE200014AFE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		45338DFC1A15370100252EE4 /* TestdriveApp-Briding-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestdriveApp-Briding-Header.h"; sourceTree = "<group>"; };
 		454E42A81A13C823007BEE79 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		45BF99931A130C55004E4E2E /* EonilFileSystemEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EonilFileSystemEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45BF99971A130C55004E4E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45BF99981A130C55004E4E2E /* EonilFileSystemEvents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EonilFileSystemEvents.h; sourceTree = "<group>"; };
-		45BF999E1A130C55004E4E2E /* EonilFileSystemEventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EonilFileSystemEventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45BF99A41A130C55004E4E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45BF99A51A130C55004E4E2E /* EonilFSEventsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EonilFSEventsTests.m; sourceTree = "<group>"; };
 		45BF99B11A130C6D004E4E2E /* EonilJustFSEventStreamWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EonilJustFSEventStreamWrapper.h; sourceTree = "<group>"; };
@@ -62,30 +80,21 @@
 		45BF99D41A131E3A004E4E2E /* TestdriveAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestdriveAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45BF99D91A131E3A004E4E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45BF99DA1A131E3A004E4E2E /* TestdriveAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestdriveAppTests.swift; sourceTree = "<group>"; };
+		45D970771A155D520037649F /* libEonilFileSystemEvents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEonilFileSystemEvents.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		45D970791A155D520037649F /* EonilFileSystemEvents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EonilFileSystemEvents.h; sourceTree = "<group>"; };
+		45D9707B1A155D520037649F /* EonilFileSystemEvents.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EonilFileSystemEvents.m; sourceTree = "<group>"; };
+		45D970811A155D520037649F /* EonilFileSystemEventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EonilFileSystemEventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45D970871A155D520037649F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45D970961A155DD50037649F /* Tester2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tester2; sourceTree = BUILT_PRODUCTS_DIR; };
+		45D970981A155DD50037649F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		45EB2A771A155CF500014AFE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		45BF998F1A130C55004E4E2E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				45BF99B61A130CBD004E4E2E /* CoreServices.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		45BF999B1A130C55004E4E2E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				45BF999F1A130C55004E4E2E /* EonilFileSystemEvents.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		45BF99C21A131E3A004E4E2E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45402A821A15379200127E50 /* EonilFileSystemEvents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +102,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45BF99E21A131E3F004E4E2E /* EonilFileSystemEvents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45D970741A155D520037649F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45D9707E1A155D520037649F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45D970821A155D520037649F /* libEonilFileSystemEvents.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45D970931A155DD50037649F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +139,10 @@
 				45BF99A21A130C55004E4E2E /* EonilFSEventsTests */,
 				45BF99C61A131E3A004E4E2E /* TestdriveApp */,
 				45BF99D71A131E3A004E4E2E /* TestdriveAppTests */,
+				45EB2A761A155CF500014AFE /* Tester2 */,
+				45D970781A155D520037649F /* EonilFileSystemEvents */,
+				45D970851A155D520037649F /* EonilFileSystemEventsTests */,
+				45D970971A155DD50037649F /* Tester2 */,
 				45BF99941A130C55004E4E2E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,10 +150,11 @@
 		45BF99941A130C55004E4E2E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				45BF99931A130C55004E4E2E /* EonilFileSystemEvents.framework */,
-				45BF999E1A130C55004E4E2E /* EonilFileSystemEventsTests.xctest */,
 				45BF99C51A131E3A004E4E2E /* TestdriveApp.app */,
 				45BF99D41A131E3A004E4E2E /* TestdriveAppTests.xctest */,
+				45D970771A155D520037649F /* libEonilFileSystemEvents.a */,
+				45D970811A155D520037649F /* EonilFileSystemEventsTests.xctest */,
+				45D970961A155DD50037649F /* Tester2 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,10 +163,10 @@
 			isa = PBXGroup;
 			children = (
 				45BF99981A130C55004E4E2E /* EonilFileSystemEvents.h */,
-				45BF99B11A130C6D004E4E2E /* EonilJustFSEventStreamWrapper.h */,
-				45BF99B21A130C6D004E4E2E /* EonilJustFSEventStreamWrapper.m */,
 				45BF99BD1A131987004E4E2E /* EonilFileSystemEventStream.h */,
 				45BF99BE1A131987004E4E2E /* EonilFileSystemEventStream.m */,
+				45BF99B11A130C6D004E4E2E /* EonilJustFSEventStreamWrapper.h */,
+				45BF99B21A130C6D004E4E2E /* EonilJustFSEventStreamWrapper.m */,
 				45BF99961A130C55004E4E2E /* Supporting Files */,
 			);
 			path = EonilFSEvents;
@@ -199,58 +234,61 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		45D970781A155D520037649F /* EonilFileSystemEvents */ = {
+			isa = PBXGroup;
+			children = (
+				45D970791A155D520037649F /* EonilFileSystemEvents.h */,
+				45D9707B1A155D520037649F /* EonilFileSystemEvents.m */,
+			);
+			path = EonilFileSystemEvents;
+			sourceTree = "<group>";
+		};
+		45D970851A155D520037649F /* EonilFileSystemEventsTests */ = {
+			isa = PBXGroup;
+			children = (
+				45D970861A155D520037649F /* Supporting Files */,
+			);
+			path = EonilFileSystemEventsTests;
+			sourceTree = "<group>";
+		};
+		45D970861A155D520037649F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				45D970871A155D520037649F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		45D970971A155DD50037649F /* Tester2 */ = {
+			isa = PBXGroup;
+			children = (
+				45D970981A155DD50037649F /* main.m */,
+			);
+			path = Tester2;
+			sourceTree = "<group>";
+		};
+		45EB2A761A155CF500014AFE /* Tester2 */ = {
+			isa = PBXGroup;
+			children = (
+				45EB2A771A155CF500014AFE /* main.m */,
+			);
+			path = Tester2;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		45BF99901A130C55004E4E2E /* Headers */ = {
+		45D970751A155D520037649F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45BF99B31A130C6D004E4E2E /* EonilJustFSEventStreamWrapper.h in Headers */,
-				45BF99991A130C55004E4E2E /* EonilFileSystemEvents.h in Headers */,
-				45BF99BF1A131987004E4E2E /* EonilFileSystemEventStream.h in Headers */,
+				45D9707A1A155D520037649F /* EonilFileSystemEvents.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		45BF99921A130C55004E4E2E /* EonilFileSystemEvents */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 45BF99A91A130C55004E4E2E /* Build configuration list for PBXNativeTarget "EonilFileSystemEvents" */;
-			buildPhases = (
-				45BF998E1A130C55004E4E2E /* Sources */,
-				45BF998F1A130C55004E4E2E /* Frameworks */,
-				45BF99901A130C55004E4E2E /* Headers */,
-				45BF99911A130C55004E4E2E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = EonilFileSystemEvents;
-			productName = EonilFSEvents;
-			productReference = 45BF99931A130C55004E4E2E /* EonilFileSystemEvents.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		45BF999D1A130C55004E4E2E /* EonilFileSystemEventsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 45BF99AC1A130C55004E4E2E /* Build configuration list for PBXNativeTarget "EonilFileSystemEventsTests" */;
-			buildPhases = (
-				45BF999A1A130C55004E4E2E /* Sources */,
-				45BF999B1A130C55004E4E2E /* Frameworks */,
-				45BF999C1A130C55004E4E2E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				45BF99A11A130C55004E4E2E /* PBXTargetDependency */,
-			);
-			name = EonilFileSystemEventsTests;
-			productName = EonilFSEventsTests;
-			productReference = 45BF999E1A130C55004E4E2E /* EonilFileSystemEventsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		45BF99C41A131E3A004E4E2E /* TestdriveApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45BF99DC1A131E3A004E4E2E /* Build configuration list for PBXNativeTarget "TestdriveApp" */;
@@ -258,6 +296,7 @@
 				45BF99C11A131E3A004E4E2E /* Sources */,
 				45BF99C21A131E3A004E4E2E /* Frameworks */,
 				45BF99C31A131E3A004E4E2E /* Resources */,
+				45EB2A5F1A155AE200014AFE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -286,6 +325,58 @@
 			productReference = 45BF99D41A131E3A004E4E2E /* TestdriveAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		45D970761A155D520037649F /* EonilFileSystemEvents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45D970881A155D520037649F /* Build configuration list for PBXNativeTarget "EonilFileSystemEvents" */;
+			buildPhases = (
+				45D970731A155D520037649F /* Sources */,
+				45D970741A155D520037649F /* Frameworks */,
+				45D970751A155D520037649F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EonilFileSystemEvents;
+			productName = EonilFileSystemEvents;
+			productReference = 45D970771A155D520037649F /* libEonilFileSystemEvents.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		45D970801A155D520037649F /* EonilFileSystemEventsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45D9708B1A155D520037649F /* Build configuration list for PBXNativeTarget "EonilFileSystemEventsTests" */;
+			buildPhases = (
+				45D9707D1A155D520037649F /* Sources */,
+				45D9707E1A155D520037649F /* Frameworks */,
+				45D9707F1A155D520037649F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45D970841A155D520037649F /* PBXTargetDependency */,
+			);
+			name = EonilFileSystemEventsTests;
+			productName = EonilFileSystemEventsTests;
+			productReference = 45D970811A155D520037649F /* EonilFileSystemEventsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		45D970951A155DD50037649F /* Tester2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45D9709A1A155DD50037649F /* Build configuration list for PBXNativeTarget "Tester2" */;
+			buildPhases = (
+				45D970921A155DD50037649F /* Sources */,
+				45D970931A155DD50037649F /* Frameworks */,
+				45D970941A155DD50037649F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tester2;
+			productName = Tester2;
+			productReference = 45D970961A155DD50037649F /* Tester2 */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -295,18 +386,21 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Eonil;
 				TargetAttributes = {
-					45BF99921A130C55004E4E2E = {
-						CreatedOnToolsVersion = 6.1;
-					};
-					45BF999D1A130C55004E4E2E = {
-						CreatedOnToolsVersion = 6.1;
-					};
 					45BF99C41A131E3A004E4E2E = {
 						CreatedOnToolsVersion = 6.1;
 					};
 					45BF99D31A131E3A004E4E2E = {
 						CreatedOnToolsVersion = 6.1;
 						TestTargetID = 45BF99C41A131E3A004E4E2E;
+					};
+					45D970761A155D520037649F = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					45D970801A155D520037649F = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					45D970951A155DD50037649F = {
+						CreatedOnToolsVersion = 6.1;
 					};
 				};
 			};
@@ -323,29 +417,16 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				45BF99921A130C55004E4E2E /* EonilFileSystemEvents */,
-				45BF999D1A130C55004E4E2E /* EonilFileSystemEventsTests */,
 				45BF99C41A131E3A004E4E2E /* TestdriveApp */,
 				45BF99D31A131E3A004E4E2E /* TestdriveAppTests */,
+				45D970761A155D520037649F /* EonilFileSystemEvents */,
+				45D970801A155D520037649F /* EonilFileSystemEventsTests */,
+				45D970951A155DD50037649F /* Tester2 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		45BF99911A130C55004E4E2E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		45BF999C1A130C55004E4E2E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		45BF99C31A131E3A004E4E2E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,31 +443,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		45D9707F1A155D520037649F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		45BF998E1A130C55004E4E2E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				45BF99B41A130C6D004E4E2E /* EonilJustFSEventStreamWrapper.m in Sources */,
-				45BF99C01A131987004E4E2E /* EonilFileSystemEventStream.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		45BF999A1A130C55004E4E2E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				45BF99A61A130C55004E4E2E /* EonilFSEventsTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		45BF99C11A131E3A004E4E2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				45BF99CA1A131E3A004E4E2E /* AppDelegate.swift in Sources */,
+				45D970911A155D780037649F /* EonilJustFSEventStreamWrapper.m in Sources */,
+				45D970901A155D780037649F /* EonilFileSystemEventStream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,18 +471,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		45D970731A155D520037649F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45D9707C1A155D520037649F /* EonilFileSystemEvents.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45D9707D1A155D520037649F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45D970921A155DD50037649F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45D970991A155DD50037649F /* main.m in Sources */,
+				45D970A01A155E700037649F /* EonilJustFSEventStreamWrapper.m in Sources */,
+				45D9709F1A155E700037649F /* EonilFileSystemEventStream.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		45BF99A11A130C55004E4E2E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 45BF99921A130C55004E4E2E /* EonilFileSystemEvents */;
-			targetProxy = 45BF99A01A130C55004E4E2E /* PBXContainerItemProxy */;
-		};
 		45BF99D61A131E3A004E4E2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 45BF99C41A131E3A004E4E2E /* TestdriveApp */;
 			targetProxy = 45BF99D51A131E3A004E4E2E /* PBXContainerItemProxy */;
+		};
+		45D970841A155D520037649F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45D970761A155D520037649F /* EonilFileSystemEvents */;
+			targetProxy = 45D970831A155D520037649F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -507,75 +605,6 @@
 			};
 			name = Release;
 		};
-		45BF99AA1A130C55004E4E2E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = EonilFSEvents/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = EonilFileSystemEvents;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		45BF99AB1A130C55004E4E2E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = EonilFSEvents/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = EonilFileSystemEvents;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		45BF99AD1A130C55004E4E2E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = EonilFSEventsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = EonilFileSystemEventsTests;
-			};
-			name = Debug;
-		};
-		45BF99AE1A130C55004E4E2E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = EonilFSEventsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = EonilFileSystemEventsTests;
-			};
-			name = Release;
-		};
 		45BF99DD1A131E3A004E4E2E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -641,6 +670,76 @@
 			};
 			name = Release;
 		};
+		45D970891A155D520037649F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		45D9708A1A155D520037649F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		45D9708C1A155D520037649F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EonilFileSystemEventsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		45D9708D1A155D520037649F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EonilFileSystemEventsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		45D9709B1A155DD50037649F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		45D9709C1A155DD50037649F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -649,24 +748,6 @@
 			buildConfigurations = (
 				45BF99A71A130C55004E4E2E /* Debug */,
 				45BF99A81A130C55004E4E2E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		45BF99A91A130C55004E4E2E /* Build configuration list for PBXNativeTarget "EonilFileSystemEvents" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				45BF99AA1A130C55004E4E2E /* Debug */,
-				45BF99AB1A130C55004E4E2E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		45BF99AC1A130C55004E4E2E /* Build configuration list for PBXNativeTarget "EonilFileSystemEventsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				45BF99AD1A130C55004E4E2E /* Debug */,
-				45BF99AE1A130C55004E4E2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -688,6 +769,30 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		45D970881A155D520037649F /* Build configuration list for PBXNativeTarget "EonilFileSystemEvents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45D970891A155D520037649F /* Debug */,
+				45D9708A1A155D520037649F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		45D9708B1A155D520037649F /* Build configuration list for PBXNativeTarget "EonilFileSystemEventsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45D9708C1A155D520037649F /* Debug */,
+				45D9708D1A155D520037649F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		45D9709A1A155DD50037649F /* Build configuration list for PBXNativeTarget "Tester2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45D9709B1A155DD50037649F /* Debug */,
+				45D9709C1A155DD50037649F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

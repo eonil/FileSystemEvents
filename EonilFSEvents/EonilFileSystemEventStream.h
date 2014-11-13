@@ -257,7 +257,7 @@ typedef void(^EonilFileSystemEventStreamCallback)(NSArray* events);
  Creates a new instance with everything setup and starts immediately.
  @param	callback	Called when some events notified. See @c EonilFileSystemEventStreamCallback for details.
  */
-- (instancetype)initWithCallback:(EonilFileSystemEventStreamCallback)callback pathsToWatch:(NSArray*)pathsToWatch watchRoot:(BOOL)watchRoot queue:(dispatch_queue_t)queue;
+- (instancetype)initWithCallback:(EonilFileSystemEventStreamCallback)callback pathsToWatch:(NSArray*)pathsToWatch latency:(NSTimeInterval)latency watchRoot:(BOOL)watchRoot queue:(dispatch_queue_t)queue;
 @end
 
 

@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "45D970761A155D520037649F"
-               BuildableName = "libEonilFileSystemEvents.a"
-               BlueprintName = "EonilFileSystemEvents"
-               ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "45D970801A155D520037649F"
-               BuildableName = "EonilFileSystemEventsTests.xctest"
-               BlueprintName = "EonilFileSystemEventsTests"
+               BlueprintIdentifier = "45D970951A155DD50037649F"
+               BuildableName = "Tester2"
+               BlueprintName = "Tester2"
                ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,23 +28,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "45D970801A155D520037649F"
-               BuildableName = "EonilFileSystemEventsTests.xctest"
-               BlueprintName = "EonilFileSystemEventsTests"
-               ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "45D970761A155D520037649F"
-            BuildableName = "libEonilFileSystemEvents.a"
-            BlueprintName = "EonilFileSystemEvents"
+            BlueprintIdentifier = "45D970951A155DD50037649F"
+            BuildableName = "Tester2"
+            BlueprintName = "Tester2"
             ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -72,15 +48,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "45D970761A155D520037649F"
-            BuildableName = "libEonilFileSystemEvents.a"
-            BlueprintName = "EonilFileSystemEvents"
+            BlueprintIdentifier = "45D970951A155DD50037649F"
+            BuildableName = "Tester2"
+            BlueprintName = "Tester2"
             ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -90,15 +66,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "45D970761A155D520037649F"
-            BuildableName = "libEonilFileSystemEvents.a"
-            BlueprintName = "EonilFileSystemEvents"
+            BlueprintIdentifier = "45D970951A155DD50037649F"
+            BuildableName = "Tester2"
+            BlueprintName = "Tester2"
             ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

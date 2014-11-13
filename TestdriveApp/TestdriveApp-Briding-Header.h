@@ -9,7 +9,8 @@
 #ifndef EonilFileSystemEvents_TestdriveApp_Briding_Header_h
 #define EonilFileSystemEvents_TestdriveApp_Briding_Header_h
 
-#import	<EonilFileSystemEvents/EonilFileSystemEvents.h>
+//#import	<EonilFileSystemEvents/EonilFileSystemEvents.h>
+#import	"EonilFileSystemEvents.h"
 
 
 #endif

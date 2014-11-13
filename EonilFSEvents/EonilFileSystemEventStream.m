@@ -25,23 +25,14 @@ EonilSimpleFileSystemEvent_set(EonilFileSystemEvent* self, NSString* path, FSEve
 
 
 
-static inline BOOL isArrayOfString(NSArray* a) {
-	for (NSObject* s in a) {
-		if ([s isKindOfClass:[NSString class]] == NO) {
-			return	NO;
-		}
-	}
-	return	YES;
-}
+
 
 @implementation EonilFileSystemEventStream {
 	EonilJustFSEventStreamWrapper*			_lowlevel;
 }
-- (instancetype)initWithCallback:(EonilFileSystemEventStreamCallback)callback pathsToWatch:(NSArray*)pathsToWatch watchRoot:(BOOL)watchRoot queue:(dispatch_queue_t)queue {
+- (instancetype)initWithCallback:(EonilFileSystemEventStreamCallback)callback pathsToWatch:(NSArray*)pathsToWatch latency:(NSTimeInterval)latency watchRoot:(BOOL)watchRoot queue:(dispatch_queue_t)queue {
 	NSAssert(callback != nil, @"Parameter `callback` shouldn't be `nil`.");
-	NSAssert([pathsToWatch isKindOfClass:[NSArray class]], @"Paraleter `pathsToWatch` must be an array.");
-	NSAssert(isArrayOfString(pathsToWatch), @"Paraleter `pathsToWatch` must be an array of `NSString`.");
-	NSAssert(queue != nil, @"Paraleter `queue` must be a `dispatch_queue_t` object instance.");
+	NSAssert(queue != nil, @"Parameter `queue` must be a `dispatch_queue_t` object instance.");
 	
 	self	=	[super init];
 	if (self) {
@@ -51,7 +42,7 @@ static inline BOOL isArrayOfString(NSArray* a) {
 		if (watchRoot) {
 			fs1	|=	kFSEventStreamCreateFlagWatchRoot;
 		}
-		
+
 		_lowlevel	=	[[EonilJustFSEventStreamWrapper alloc] initWithAllocator:NULL callback:^(ConstFSEventStreamRef stream, size_t numEvents, void *eventPaths, const FSEventStreamEventFlags *eventFlags, const FSEventStreamEventId *eventIds) {
 			NSMutableArray*	a1	=	[[NSMutableArray alloc] initWithCapacity:numEvents];
 			NSArray*		ps1	=	(__bridge NSArray*)eventPaths;
@@ -61,7 +52,7 @@ static inline BOOL isArrayOfString(NSArray* a) {
 				[a1 addObject:ev1];
 			}
 			callback(a1);
-		} pathsToWatch:pathsToWatch sinceWhen:(kFSEventStreamEventIdSinceNow) latency:0.0 flags:(fs1)];
+		} pathsToWatch:pathsToWatch sinceWhen:(kFSEventStreamEventIdSinceNow) latency:latency flags:(fs1)];
 		
 		[_lowlevel setDispatchQueue:_queue];
 		[_lowlevel start];
