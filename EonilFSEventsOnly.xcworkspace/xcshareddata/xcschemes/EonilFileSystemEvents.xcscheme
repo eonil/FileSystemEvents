@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "45BF99921A130C55004E4E2E"
-               BuildableName = "EonilFSEvents.framework"
-               BlueprintName = "EonilFSEvents"
-               ReferencedContainer = "container:EonilFSEvents.xcodeproj">
+               BuildableName = "EonilFileSystemEvents.framework"
+               BlueprintName = "EonilFileSystemEvents"
+               ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "45BF999D1A130C55004E4E2E"
-               BuildableName = "EonilFSEventsTests.xctest"
-               BlueprintName = "EonilFSEventsTests"
-               ReferencedContainer = "container:EonilFSEvents.xcodeproj">
+               BuildableName = "EonilFileSystemEventsTests.xctest"
+               BlueprintName = "EonilFileSystemEventsTests"
+               ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "45BF999D1A130C55004E4E2E"
-               BuildableName = "EonilFSEventsTests.xctest"
-               BlueprintName = "EonilFSEventsTests"
-               ReferencedContainer = "container:EonilFSEvents.xcodeproj">
+               BuildableName = "EonilFileSystemEventsTests.xctest"
+               BlueprintName = "EonilFileSystemEventsTests"
+               ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "45BF99921A130C55004E4E2E"
-            BuildableName = "EonilFSEvents.framework"
-            BlueprintName = "EonilFSEvents"
-            ReferencedContainer = "container:EonilFSEvents.xcodeproj">
+            BuildableName = "EonilFileSystemEvents.framework"
+            BlueprintName = "EonilFileSystemEvents"
+            ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "45BF99921A130C55004E4E2E"
-            BuildableName = "EonilFSEvents.framework"
-            BlueprintName = "EonilFSEvents"
-            ReferencedContainer = "container:EonilFSEvents.xcodeproj">
+            BuildableName = "EonilFileSystemEvents.framework"
+            BlueprintName = "EonilFileSystemEvents"
+            ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "45BF99921A130C55004E4E2E"
-            BuildableName = "EonilFSEvents.framework"
-            BlueprintName = "EonilFSEvents"
-            ReferencedContainer = "container:EonilFSEvents.xcodeproj">
+            BuildableName = "EonilFileSystemEvents.framework"
+            BlueprintName = "EonilFileSystemEvents"
+            ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

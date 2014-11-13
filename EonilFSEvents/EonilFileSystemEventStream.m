@@ -1,6 +1,6 @@
 //
 //  EonilFileSystemEventStream.m
-//  EonilFSEvents
+//  EonilFileSystemEvents
 //
 //  Created by Hoon H. on 11/12/14.
 //  Copyright (c) 2014 Eonil. All rights reserved.
@@ -15,6 +15,9 @@ EonilSimpleFileSystemEvent_set(EonilFileSystemEvent* self, NSString* path, FSEve
 	self->_path	=	[path copy];
 	self->_flag	=	flag;
 	self->_ID	=	ID;
+}
+- (NSString *)description {
+	return	[NSString stringWithFormat:@"<EonilFileSystemEvent: path = %@, flag = %@, id = %@>", _path, NSStringFromFSEventStreamEventFlags(_flag), @(_ID)];
 }
 @end
 

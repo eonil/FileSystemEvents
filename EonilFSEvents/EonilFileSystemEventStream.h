@@ -1,6 +1,6 @@
 //
 //  EonilFileSystemEventStream.h
-//  EonilFSEvents
+//  EonilFileSystemEvents
 //
 //  Created by Hoon H. on 11/12/14.
 //  Copyright (c) 2014 Eonil. All rights reserved.
@@ -247,7 +247,7 @@ typedef void(^EonilFileSystemEventStreamCallback)(NSArray* events);
 
 /*!
  Tailored for use with Swift.
- Slower than @c EonilFSEventStream class due to more allocation.
+ Slower than @c EonilFileSystemEventstream class due to more allocation.
  This starts monitoring automatically when created, and stops when deallocated.
  This notifies all events immediately on the specified GCD queue.
  */

@@ -1,6 +1,6 @@
 //
-//  EonilFSEventsTests.m
-//  EonilFSEventsTests
+//  EonilFileSystemEventsTests.m
+//  EonilFileSystemEventsTests
 //
 //  Created by Hoon H. on 11/12/14.
 //  Copyright (c) 2014 Eonil. All rights reserved.
@@ -8,13 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
-#import <EonilFSEvents/EonilFSEvents.h>
+#import <EonilFileSystemEvents/EonilFileSystemEvents.h>
 
-@interface EonilFSEventsTests : XCTestCase
+@interface EonilFileSystemEventsTests : XCTestCase
 
 @end
 
-@implementation EonilFSEventsTests
+@implementation EonilFileSystemEventsTests
 
 - (void)setUp {
     [super setUp];
@@ -43,7 +43,7 @@
 //	dispatch_queue_t		q1		=	dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0);
 //	dispatch_semaphore_t	sema1	=	dispatch_semaphore_create(0);
 //	
-//	EonilFSEventStream*	s1	=	[[EonilFSEventStream alloc] initWithAllocator:NULL callback:^(ConstFSEventStreamRef stream, size_t numEvents, void *eventPaths, const FSEventStreamEventFlags *eventFlags, const FSEventStreamEventId *eventIds) {
+//	EonilFileSystemEventstream*	s1	=	[[EonilFileSystemEventstream alloc] initWithAllocator:NULL callback:^(ConstFSEventStreamRef stream, size_t numEvents, void *eventPaths, const FSEventStreamEventFlags *eventFlags, const FSEventStreamEventId *eventIds) {
 //		NSArray*	a1	=	(__bridge NSArray*)eventPaths;
 //		NSLog(@"%@", a1);
 //		
