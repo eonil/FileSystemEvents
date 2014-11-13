@@ -69,7 +69,7 @@ static inline BOOL isArrayOfString(NSArray* a) {
 		_callback		=	callback;
 		
 		if (_raw == nil) {
-			@throw [NSException exceptionWithName:@"EonilJustFSEventStreamWrapper" reason:@"Could not create a `FSEventStreamRef` object instance. Reason unknown." userInfo:nil];
+			@throw [NSException exceptionWithName:@"EonilFileSystemEvents" reason:@"Could not create a `FSEventStreamRef` object instance. Reason unknown." userInfo:nil];
 		}
 	}
 	return	self;

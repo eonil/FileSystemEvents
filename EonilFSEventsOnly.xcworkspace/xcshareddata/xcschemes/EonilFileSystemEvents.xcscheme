@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "45D970761A155D520037649F"
-               BuildableName = "libEonilFileSystemEvents.a"
+               BlueprintIdentifier = "45D970A51A1569090037649F"
+               BuildableName = "EonilFileSystemEvents.framework"
                BlueprintName = "EonilFileSystemEvents"
-               ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "45D970801A155D520037649F"
-               BuildableName = "EonilFileSystemEventsTests.xctest"
-               BlueprintName = "EonilFileSystemEventsTests"
-               ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
+               ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,26 +28,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "45D970801A155D520037649F"
-               BuildableName = "EonilFileSystemEventsTests.xctest"
-               BlueprintName = "EonilFileSystemEventsTests"
-               ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "45D970761A155D520037649F"
-            BuildableName = "libEonilFileSystemEvents.a"
-            BlueprintName = "EonilFileSystemEvents"
-            ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -75,10 +42,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "45D970761A155D520037649F"
-            BuildableName = "libEonilFileSystemEvents.a"
+            BlueprintIdentifier = "45D970A51A1569090037649F"
+            BuildableName = "EonilFileSystemEvents.framework"
             BlueprintName = "EonilFileSystemEvents"
-            ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
+            ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -93,10 +60,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "45D970761A155D520037649F"
-            BuildableName = "libEonilFileSystemEvents.a"
+            BlueprintIdentifier = "45D970A51A1569090037649F"
+            BuildableName = "EonilFileSystemEvents.framework"
             BlueprintName = "EonilFileSystemEvents"
-            ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
+            ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

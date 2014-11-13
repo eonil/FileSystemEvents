@@ -17,7 +17,21 @@
                BlueprintIdentifier = "45BF99C41A131E3A004E4E2E"
                BuildableName = "TestdriveApp.app"
                BlueprintName = "TestdriveApp"
-               ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
+               ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "45D970AF1A15690A0037649F"
+               BuildableName = "EonilFileSystemEventsTests.xctest"
+               BlueprintName = "EonilFileSystemEventsTests"
+               ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +45,7 @@
                BlueprintIdentifier = "45BF99D31A131E3A004E4E2E"
                BuildableName = "TestdriveAppTests.xctest"
                BlueprintName = "TestdriveAppTests"
-               ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
+               ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,10 +60,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "45D970AF1A15690A0037649F"
+               BuildableName = "EonilFileSystemEventsTests.xctest"
+               BlueprintName = "EonilFileSystemEventsTests"
+               ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "45BF99D31A131E3A004E4E2E"
                BuildableName = "TestdriveAppTests.xctest"
                BlueprintName = "TestdriveAppTests"
-               ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
+               ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -59,7 +83,7 @@
             BlueprintIdentifier = "45BF99C41A131E3A004E4E2E"
             BuildableName = "TestdriveApp.app"
             BlueprintName = "TestdriveApp"
-            ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
+            ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -78,7 +102,7 @@
             BlueprintIdentifier = "45BF99C41A131E3A004E4E2E"
             BuildableName = "TestdriveApp.app"
             BlueprintName = "TestdriveApp"
-            ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
+            ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,7 +120,7 @@
             BlueprintIdentifier = "45BF99C41A131E3A004E4E2E"
             BuildableName = "TestdriveApp.app"
             BlueprintName = "TestdriveApp"
-            ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
+            ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

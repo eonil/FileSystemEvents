@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "45D970951A155DD50037649F"
-               BuildableName = "Tester2"
-               BlueprintName = "Tester2"
-               ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
+               BuildableName = "InternalTester"
+               BlueprintName = "InternalTester"
+               ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "45D970951A155DD50037649F"
-            BuildableName = "Tester2"
-            BlueprintName = "Tester2"
-            ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
+            BuildableName = "InternalTester"
+            BlueprintName = "InternalTester"
+            ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "45D970951A155DD50037649F"
-            BuildableName = "Tester2"
-            BlueprintName = "Tester2"
-            ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
+            BuildableName = "InternalTester"
+            BlueprintName = "InternalTester"
+            ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "45D970951A155DD50037649F"
-            BuildableName = "Tester2"
-            BlueprintName = "Tester2"
-            ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
+            BuildableName = "InternalTester"
+            BlueprintName = "InternalTester"
+            ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

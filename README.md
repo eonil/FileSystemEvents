@@ -14,24 +14,19 @@ Mainly written in Objective-C due to lack of support from Swift.
 How To Use
 ----------
 
-Here's example code which waits for first event, print it and quits.
+Here's example code which waits for first event, print it and quits. This single statement
+does everything needed to setup.
 
 ````objc
 
-	dispatch_queue_t		q1		=	dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0);
-	dispatch_semaphore_t	sema1	=	dispatch_semaphore_create(0);
+	s1	=	[[EonilFileSystemEventStream alloc] initWithCallback:^(NSArray *events) {
+		NSLog(@"%@", events);
+	} pathsToWatch:@[@"/Users/Eonil/Documents", @"/Users/Eonil/Temp"] latency:1 watchRoot:YES queue:q1];
 
-	EonilFileSystemEventStream*	s1	=	[[EonilFileSystemEventStream alloc] 
-		initWithCallback:^(NSArray *events) {
-			NSLog(@"%@", events);
-			dispatch_semaphore_signal(sema1);
-		} pathsToWatch:@[@"/Users/Eonil/Temp"] watchRoot:YES queue:q1];
-
-	NSLog(@"%@", s1);
-	dispatch_semaphore_wait(sema1, DISPATCH_TIME_FOREVER);
 
 ````
 
+See TestdriveApp for Swift example.
 
 Use `EonilFileSystemEventStream` class. Required informations are
 all noted as comments. Follows strict Objective-C conventions, so
