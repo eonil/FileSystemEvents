@@ -1,6 +1,7 @@
 README
 ======
 2014/11/13
+2015/01/17
 Hoon H.
 
 Provides dead-simple access to `FSEvents` framework for Swift.
@@ -29,7 +30,9 @@ to take receive the events.
 		@IBOutlet weak var window: NSWindow!
 		
 		let	s1		=	FileSystemEventMonitor(
-			pathsToWatch: ["~/Documents".stringByExpandingTildeInPath, "~/Temp".stringByExpandingTildeInPath],
+			pathsToWatch: [
+				"~/Documents".stringByExpandingTildeInPath, 
+				"~/Temp".stringByExpandingTildeInPath],
 			latency: 1,
 			watchRoot: true,
 			queue: dispatch_get_main_queue()) { (events:[FileSystemEvent])->() in
@@ -40,7 +43,7 @@ to take receive the events.
 
 ````
 
-See `TestdriveApp` target for another full fledged Swift example.
+See `TestdriveApp` target for another fully fledged Swift example.
 
 
 
