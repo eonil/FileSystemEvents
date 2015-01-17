@@ -12,6 +12,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /*
  *  FSEventStreamEventFlags
  *
@@ -208,6 +220,10 @@ typedef NS_OPTIONS(UInt32, EonilFileSystemEventFlag) {
 	EonilFileSystemEventFlagOwnEvent __OSX_AVAILABLE_STARTING(__MAC_10_9, __IPHONE_7_0) = kFSEventStreamEventFlagOwnEvent
 	
 };
+
+
+
+
 
 
 /*!

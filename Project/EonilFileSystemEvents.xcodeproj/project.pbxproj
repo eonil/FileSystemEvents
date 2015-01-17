@@ -20,10 +20,23 @@
 		45D970D61A1569D20037649F /* EonilFileSystemEventStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D970C91A1569750037649F /* EonilFileSystemEventStream.m */; };
 		45D970D71A1569D20037649F /* EonilJustFSEventStreamWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D970CB1A1569750037649F /* EonilJustFSEventStreamWrapper.m */; };
 		45D970DA1A1569F60037649F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D970D91A1569F60037649F /* main.m */; };
+		45DA956C1A69E5E70091410B /* FileSystemEventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DA956B1A69E5E70091410B /* FileSystemEventMonitor.swift */; };
+		45DA95851A69F1610091410B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DA95841A69F1610091410B /* AppDelegate.swift */; };
+		45DA95871A69F1610091410B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45DA95861A69F1610091410B /* Images.xcassets */; };
+		45DA958A1A69F1610091410B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45DA95881A69F1610091410B /* MainMenu.xib */; };
+		45DA959D1A69F17A0091410B /* EonilFileSystemEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D970A61A1569090037649F /* EonilFileSystemEvents.framework */; };
+		45DA959E1A69F17A0091410B /* EonilFileSystemEvents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45D970A61A1569090037649F /* EonilFileSystemEvents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		45D970BB1A15690A0037649F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45BF998A1A130C55004E4E2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45D970A51A1569090037649F;
+			remoteInfo = EonilFileSystemEvents;
+		};
+		45DA959F1A69F17A0091410B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 45BF998A1A130C55004E4E2E /* Project object */;
 			proxyType = 1;
@@ -41,6 +54,17 @@
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		45DA95A11A69F17A0091410B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				45DA959E1A69F17A0091410B /* EonilFileSystemEvents.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		45EB2A5F1A155AE200014AFE /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -63,7 +87,7 @@
 		45BF99C91A131E3A004E4E2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45BF99CB1A131E3A004E4E2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		45BF99CE1A131E3A004E4E2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		45D970961A155DD50037649F /* Tester2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tester2; sourceTree = BUILT_PRODUCTS_DIR; };
+		45D970961A155DD50037649F /* InternalTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = InternalTester; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D970A61A1569090037649F /* EonilFileSystemEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EonilFileSystemEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D970C71A1569750037649F /* EonilFileSystemEvents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EonilFileSystemEvents.h; sourceTree = "<group>"; };
 		45D970C81A1569750037649F /* EonilFileSystemEventStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EonilFileSystemEventStream.h; sourceTree = "<group>"; };
@@ -72,6 +96,13 @@
 		45D970CB1A1569750037649F /* EonilJustFSEventStreamWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EonilJustFSEventStreamWrapper.m; sourceTree = "<group>"; };
 		45D970CC1A1569750037649F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45D970D91A1569F60037649F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		45DA95611A69DF610091410B /* InternalTester-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InternalTester-Bridging-Header.h"; sourceTree = "<group>"; };
+		45DA956B1A69E5E70091410B /* FileSystemEventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystemEventMonitor.swift; sourceTree = "<group>"; };
+		45DA95801A69F1610091410B /* InternalTester4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InternalTester4.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45DA95831A69F1610091410B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45DA95841A69F1610091410B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		45DA95861A69F1610091410B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		45DA95891A69F1610091410B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +128,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		45DA957D1A69F1610091410B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45DA959D1A69F17A0091410B /* EonilFileSystemEvents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -105,6 +144,7 @@
 			children = (
 				45D970C61A1569750037649F /* Sources */,
 				45D970D81A1569F60037649F /* InternalTester */,
+				45DA95811A69F1610091410B /* InternalTester4 */,
 				45BF99C61A131E3A004E4E2E /* TestdriveApp */,
 				45D970C51A1569540037649F /* Frameworks */,
 				45BF99941A130C55004E4E2E /* Products */,
@@ -115,8 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				45BF99C51A131E3A004E4E2E /* TestdriveApp.app */,
-				45D970961A155DD50037649F /* Tester2 */,
+				45D970961A155DD50037649F /* InternalTester */,
 				45D970A61A1569090037649F /* EonilFileSystemEvents.framework */,
+				45DA95801A69F1610091410B /* InternalTester4.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,6 +199,8 @@
 				45D970CA1A1569750037649F /* EonilJustFSEventStreamWrapper.h */,
 				45D970CB1A1569750037649F /* EonilJustFSEventStreamWrapper.m */,
 				45D970CC1A1569750037649F /* Info.plist */,
+				45DA95611A69DF610091410B /* InternalTester-Bridging-Header.h */,
+				45DA956B1A69E5E70091410B /* FileSystemEventMonitor.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -168,6 +211,25 @@
 				45D970D91A1569F60037649F /* main.m */,
 			);
 			path = InternalTester;
+			sourceTree = "<group>";
+		};
+		45DA95811A69F1610091410B /* InternalTester4 */ = {
+			isa = PBXGroup;
+			children = (
+				45DA95841A69F1610091410B /* AppDelegate.swift */,
+				45DA95861A69F1610091410B /* Images.xcassets */,
+				45DA95881A69F1610091410B /* MainMenu.xib */,
+				45DA95821A69F1610091410B /* Supporting Files */,
+			);
+			path = InternalTester4;
+			sourceTree = "<group>";
+		};
+		45DA95821A69F1610091410B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				45DA95831A69F1610091410B /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +281,7 @@
 			);
 			name = InternalTester;
 			productName = Tester2;
-			productReference = 45D970961A155DD50037649F /* Tester2 */;
+			productReference = 45D970961A155DD50037649F /* InternalTester */;
 			productType = "com.apple.product-type.tool";
 		};
 		45D970A51A1569090037649F /* EonilFileSystemEvents */ = {
@@ -240,6 +302,25 @@
 			productReference = 45D970A61A1569090037649F /* EonilFileSystemEvents.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		45DA957F1A69F1610091410B /* InternalTester4 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45DA95971A69F1610091410B /* Build configuration list for PBXNativeTarget "InternalTester4" */;
+			buildPhases = (
+				45DA957C1A69F1610091410B /* Sources */,
+				45DA957D1A69F1610091410B /* Frameworks */,
+				45DA957E1A69F1610091410B /* Resources */,
+				45DA95A11A69F17A0091410B /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45DA95A01A69F17A0091410B /* PBXTargetDependency */,
+			);
+			name = InternalTester4;
+			productName = InternalTester4;
+			productReference = 45DA95801A69F1610091410B /* InternalTester4.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -258,6 +339,9 @@
 					45D970A51A1569090037649F = {
 						CreatedOnToolsVersion = 6.1;
 					};
+					45DA957F1A69F1610091410B = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 				};
 			};
 			buildConfigurationList = 45BF998D1A130C55004E4E2E /* Build configuration list for PBXProject "EonilFileSystemEvents" */;
@@ -275,6 +359,7 @@
 			targets = (
 				45D970A51A1569090037649F /* EonilFileSystemEvents */,
 				45D970951A155DD50037649F /* InternalTester */,
+				45DA957F1A69F1610091410B /* InternalTester4 */,
 				45BF99C41A131E3A004E4E2E /* TestdriveApp */,
 			);
 		};
@@ -294,6 +379,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45DA957E1A69F1610091410B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45DA95871A69F1610091410B /* Images.xcassets in Resources */,
+				45DA958A1A69F1610091410B /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +417,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				45D970D11A1569A80037649F /* EonilFileSystemEventStream.m in Sources */,
+				45DA956C1A69E5E70091410B /* FileSystemEventMonitor.swift in Sources */,
 				45D970D21A1569A80037649F /* EonilJustFSEventStreamWrapper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45DA957C1A69F1610091410B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45DA95851A69F1610091410B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +438,11 @@
 			target = 45D970A51A1569090037649F /* EonilFileSystemEvents */;
 			targetProxy = 45D970BB1A15690A0037649F /* PBXContainerItemProxy */;
 		};
+		45DA95A01A69F17A0091410B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45D970A51A1569090037649F /* EonilFileSystemEvents */;
+			targetProxy = 45DA959F1A69F17A0091410B /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -342,6 +450,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				45BF99CE1A131E3A004E4E2E /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		45DA95881A69F1610091410B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45DA95891A69F1610091410B /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -387,7 +503,6 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = "TestdriveApp/TestdriveApp-Briding-Header.h";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -425,7 +540,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = "TestdriveApp/TestdriveApp-Briding-Header.h";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -444,6 +558,7 @@
 				INFOPLIST_FILE = TestdriveApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestdriveApp/TestdriveApp-Briding-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -457,30 +572,39 @@
 				INFOPLIST_FILE = TestdriveApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestdriveApp/TestdriveApp-Briding-Header.h";
 			};
 			name = Release;
 		};
 		45D9709B1A155DD50037649F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/InternalTester-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		45D9709C1A155DD50037649F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/InternalTester-Bridging-Header.h";
 			};
 			name = Release;
 		};
 		45D970C01A15690A0037649F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -504,6 +628,7 @@
 		45D970C11A15690A0037649F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -516,6 +641,37 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		45DA95981A69F1610091410B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = InternalTester4/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		45DA95991A69F1610091410B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = InternalTester4/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -557,6 +713,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		45DA95971A69F1610091410B /* Build configuration list for PBXNativeTarget "InternalTester4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45DA95981A69F1610091410B /* Debug */,
+				45DA95991A69F1610091410B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

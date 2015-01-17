@@ -3,8 +3,8 @@ README
 2014/11/13
 Hoon H.
 
-Provides dead-simple access to `FSEvents` framework.
-Mainly written in Objective-C due to lack of support from Swift.
+Provides dead-simple access to `FSEvents` framework for Swift.
+Low level core is written in Objective-C due to lack of support from Swift.
 (lacks some flags, lacks C-callback function) 
 
 
@@ -14,26 +14,54 @@ Mainly written in Objective-C due to lack of support from Swift.
 How To Use
 ----------
 
-Here's example code which waits for first event, print it and quits. This single statement
-does everything needed to setup.
+Here's minimal example code which waits for events and prints them. This single statement
+does everything all needed jobs to setup. Just keep the created object as long as you want
+to take receive the events.
 
-````objc
+````swift
 
-	s1	=	[[EonilFileSystemEventStream alloc] initWithCallback:^(NSArray *events) {
-		NSLog(@"%@", events);
-	} pathsToWatch:@[@"/Users/Eonil/Documents", @"/Users/Eonil/Temp"] latency:1 watchRoot:YES queue:q1];
+	import Cocoa
+	import EonilFileSystemEvents
+
+	@NSApplicationMain
+	class AppDelegate: NSObject, NSApplicationDelegate {
+
+		@IBOutlet weak var window: NSWindow!
+		
+		let	s1		=	FileSystemEventMonitor(
+			pathsToWatch: ["~/Documents".stringByExpandingTildeInPath, "~/Temp".stringByExpandingTildeInPath],
+			latency: 1,
+			watchRoot: true,
+			queue: dispatch_get_main_queue()) { (events:[FileSystemEvent])->() in
+				println(events)
+			}
+	}
 
 
 ````
 
-See `TestdriveApp` target for Swift example.
+See `TestdriveApp` target for another full fledged Swift example.
 
-Use `EonilFileSystemEventStream` class. Required informations are
+
+
+
+Explanation
+-----------
+Use `FileSystemEventMonitor` class. Required informations are
 all noted as comments. Follows strict Objective-C conventions, so
 should be straightforward.
 Create it, and monitoring will start immediately. Deallocate it to
 stop monitoring. (RAII semantics) Supplied callback block will be
 notified on specified event.
+
+Unfortunately, as Swift does not support static library target, you
+cannot link this as a library to a command-line programs currently.
+So examples had to written as AppKit application target.
+
+For Objective-C programs, use `EonilFileSystemEventStream` class.
+Required informations are all noted as comments. This class follows
+strict Objective-C conventions, so should be straightforward.
+It is unclear how long I will keep the Objective-C version.
 
 You will get useful assertions when you compile in debug mode. 
 These kind of assertions are essential in Objective-C to build 
@@ -46,7 +74,8 @@ when you are writing up.
 
 Notes
 -----
-This library has been tested on OSX 10.10 with Xcode 6.1.
+This library has been written by Hoon H., and tested on OSX 10.10 
+with Xcode 6.1.
 Licensed under MIT license.
 
 

@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-//import EonilFileSystemEvents
+import EonilFileSystemEvents
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource, NSTableViewDelegate {
@@ -21,45 +21,32 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource, NSTab
 	}
 	
 	var	items	=	[] as [Item]
-	var	monitor	=	nil as EonilFileSystemEventStream?
+	var	monitor	=	nil as FileSystemEventMonitor?
 	var	queue	=	dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0)
 
 	func applicationDidFinishLaunching(aNotification: NSNotification) {
 		
 		
-		
 		/////////////////////////////////////////////////////////////////
 		//	Here's the core of example.
 		/////////////////////////////////////////////////////////////////
-		let	onEvents	=	{ (events:[AnyObject]!) -> () in
-			let	a1	=	events! as [EonilFileSystemEvent]
-			dispatch_async(dispatch_get_main_queue(), { () -> Void in
-				for e1 in a1 {
-					let	v1	=	e1.flag.rawValue
-					var	a1	=	[] as [String]
-					for i:UInt32 in 0..<16 {
-						let	v2	=	0b01 << i
-						let	ok	=	(v2 & v1) > 0
-						if ok {
-							let	s	=	NSStringFromFSEventStreamEventFlags(v2)!
-							a1.append(s)
-						}
-					}
-					
-					let	s1	=	join(", ", a1)
-					self.items.append(Item(flags: s1, path: e1.path!))
+		let	onEvents	=	{ (events:[FileSystemEvent]) -> () in
+			dispatch_async(dispatch_get_main_queue()) {
+				self.items.append(Item(flags: "----", path: "----"))	//	Visual separator.
+				self.tableView.insertRowsAtIndexes(NSIndexSet(index: self.items.count-1), withAnimation: NSTableViewAnimationOptions.EffectNone)
+				
+				for ev in events {
+					self.items.append(Item(flags: ev.flag.description, path: ev.path))
 					self.tableView.insertRowsAtIndexes(NSIndexSet(index: self.items.count-1), withAnimation: NSTableViewAnimationOptions.EffectNone)
 				}
 				self.tableView.scrollToEndOfDocument(self)
-			})
+			}
 		}
-		monitor	=	EonilFileSystemEventStream(callback: onEvents, pathsToWatch: ["/", "/Users"], latency:0, watchRoot: false, queue: queue)
+		
+		monitor	=	FileSystemEventMonitor(pathsToWatch: ["/", "/Users"], latency: 0, watchRoot: false, queue: queue, callback: onEvents)
 		/////////////////////////////////////////////////////////////////
 		//	Here's the core of example.
 		/////////////////////////////////////////////////////////////////
-		
-		
-		
 	}
 
 	func applicationWillTerminate(aNotification: NSNotification) {
