@@ -16,7 +16,7 @@ public typealias	FileSystemEventFlag				=	EonilFileSystemEventFlag
 
 
 //	Tailored for use with Swift.
-//	This starts monitoring automatically when created, and stops when deallocated.
+//	This starts monitoring automatically at creation, and stops at deallocation.
 //	This notifies all events immediately on the specified GCD queue.
 public final class FileSystemEventMonitor {
 	public convenience init(pathsToWatch:[String], callback:FileSystemEventMonitorCallback) {

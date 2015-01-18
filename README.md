@@ -51,8 +51,7 @@ See `TestdriveApp` target for another fully fledged Swift example.
 Explanation
 -----------
 Use `FileSystemEventMonitor` class. Required informations are
-all noted as comments. Follows strict Objective-C conventions, so
-should be straightforward.
+all noted as comments.
 Create it, and monitoring will start immediately. Deallocate it to
 stop monitoring. (RAII semantics) Supplied callback block will be
 notified on specified event.
