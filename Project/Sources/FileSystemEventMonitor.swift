@@ -37,14 +37,14 @@ public final class FileSystemEventMonitor {
 			var	a1	=	[] as [FileSystemEvent]
 			a1.reserveCapacity(Int(numEvents))
 			for i in 0..<Int(numEvents) {
-				let	path	=	ps[i] as NSString as String
+				let	path	=	ps[i] as! NSString as String
 				let	flag	=	eventFlags[i]
 				let	ID		=	eventIds[i]
 				let	ev		=	FileSystemEvent(path: path, flag: FileSystemEventFlag(flag), ID: ID)
 				a1.append(ev)
 				callback(events: a1)
 			}
-		}, pathsToWatch: (pathsToWatch as NSArray), sinceWhen: FSEventStreamEventId(kFSEventStreamEventIdSinceNow), latency: latency, flags: FSEventStreamCreateFlags(fs2))
+		}, pathsToWatch: pathsToWatch, sinceWhen: FSEventStreamEventId(kFSEventStreamEventIdSinceNow), latency: latency, flags: FSEventStreamCreateFlags(fs2))
 		
 		EonilFileSystemEventFlag.UserDropped
 		_lowlevel.setDispatchQueue(_queue)

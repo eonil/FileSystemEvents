@@ -77,7 +77,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource, NSTab
 		cv1.textField!.bordered			=	false
 		cv1.textField!.backgroundColor	=	NSColor.clearColor()
 		cv1.textField!.editable			=	false
-		(cv1.textField!.cell() as NSCell).lineBreakMode	=	NSLineBreakMode.ByTruncatingHead
+		(cv1.textField!.cell() as! NSCell).lineBreakMode	=	NSLineBreakMode.ByTruncatingHead
 		
 		let	n1	=	items[row]
 		switch tableColumn!.identifier {
