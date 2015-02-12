@@ -76,9 +76,8 @@ when you are writing up.
 
 Notes
 -----
-This library has been written by Hoon H., and tested on OSX 10.10 
-with Xcode 6.1.
-Licensed under MIT license.
+This library is written by Hoon H., and tested on OSX 10.10  with 
+Xcode 6.1. Licensed under "MIT License".
 
 
 

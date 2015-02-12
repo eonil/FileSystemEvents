@@ -17,7 +17,7 @@
                BlueprintIdentifier = "45DA957F1A69F1610091410B"
                BuildableName = "InternalTester4.app"
                BlueprintName = "InternalTester4"
-               ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
+               ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "45DA958E1A69F1610091410B"
                BuildableName = "InternalTester4Tests.xctest"
                BlueprintName = "InternalTester4Tests"
-               ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
+               ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "45DA958E1A69F1610091410B"
                BuildableName = "InternalTester4Tests.xctest"
                BlueprintName = "InternalTester4Tests"
-               ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
+               ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -59,7 +59,7 @@
             BlueprintIdentifier = "45DA957F1A69F1610091410B"
             BuildableName = "InternalTester4.app"
             BlueprintName = "InternalTester4"
-            ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
+            ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -72,13 +72,14 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "45DA957F1A69F1610091410B"
             BuildableName = "InternalTester4.app"
             BlueprintName = "InternalTester4"
-            ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
+            ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -90,13 +91,14 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "45DA957F1A69F1610091410B"
             BuildableName = "InternalTester4.app"
             BlueprintName = "InternalTester4"
-            ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
+            ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
