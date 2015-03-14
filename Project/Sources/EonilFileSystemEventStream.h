@@ -83,7 +83,7 @@ typedef NS_OPTIONS(UInt32, EonilFileSystemEventFlag) {
 	 * present) only provide information to help you diagnose the problem.
 	 */
 	EonilFileSystemEventFlagUserDropped		=	kFSEventStreamEventFlagUserDropped,
-	EonilFileSystemEventFlagKernelDropped		=	kFSEventStreamEventFlagKernelDropped,
+	EonilFileSystemEventFlagKernelDropped	=	kFSEventStreamEventFlagKernelDropped,
 	
 	/*
 	 * If kFSEventStreamEventFlagEventIdsWrapped is set, it means the
@@ -132,7 +132,7 @@ typedef NS_OPTIONS(UInt32, EonilFileSystemEventFlag) {
 	 * aware of the MNT_DONTBROWSE flag that is set for volumes which
 	 * should not be displayed by user interface elements.
 	 */
-	EonilFileSystemEventFlagMount				=	kFSEventStreamEventFlagMount,
+	EonilFileSystemEventFlagMount			=	kFSEventStreamEventFlagMount,
 	
 	/*
 	 * Denotes a special event sent when a volume is unmounted underneath

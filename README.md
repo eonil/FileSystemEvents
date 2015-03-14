@@ -74,10 +74,15 @@ when you are writing up.
 
 
 
-Notes
+Note
 -----
-This library is written by Hoon H., and tested on OSX 10.10  with 
-Xcode 6.1. Licensed under "MIT License".
+This project tested on OSX 10.10 with Xcode 6.3 beta 3. 
+
+
+
+License
+-------
+This library is written by Hoon H. and licensed under "MIT License".
 
 
 

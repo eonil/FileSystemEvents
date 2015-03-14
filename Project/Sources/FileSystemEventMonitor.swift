@@ -10,21 +10,22 @@ import Foundation
 
 
 
-//	events:	An array of `FileSystemEvent` objects. Ordered as provided.
+///	:param:		events		An array of `FileSystemEvent` objects. Ordered as provided.
 public typealias	FileSystemEventMonitorCallback	=	(events:[FileSystemEvent])->()
 public typealias	FileSystemEventFlag				=	EonilFileSystemEventFlag
 
 
-//	Tailored for use with Swift.
-//	This starts monitoring automatically at creation, and stops at deallocation.
-//	This notifies all events immediately on the specified GCD queue.
+///	Tailored for use with Swift.
+///	This starts monitoring automatically at creation, and stops at deallocation.
+///	This notifies all events immediately on the specified GCD queue.
 public final class FileSystemEventMonitor {
 	public convenience init(pathsToWatch:[String], callback:FileSystemEventMonitorCallback) {
 		self.init(pathsToWatch: pathsToWatch, latency: 0, watchRoot: true, queue: dispatch_get_main_queue(), callback: callback)
 	}
 	
-	//	Creates a new instance with everything setup and starts immediately.
-	//	callback:	Called when some events notified. See `FileSystemEventMonitorCallback` for details.
+	///	Creates a new instance with everything setup and starts immediately.
+	///
+	///	:param:		callback		Called when some events notified. See `FileSystemEventMonitorCallback` for details.
 	public init(pathsToWatch:[String], latency:NSTimeInterval, watchRoot:Bool, queue:dispatch_queue_t, callback:FileSystemEventMonitorCallback) {
 		_queue		=	queue
 		_callback	=	callback
@@ -32,10 +33,10 @@ public final class FileSystemEventMonitor {
 		let	fs1	=	kFSEventStreamCreateFlagUseCFTypes | kFSEventStreamCreateFlagFileEvents | kFSEventStreamCreateFlagNoDefer
 		let	fs2	=	fs1 | (watchRoot ? kFSEventStreamCreateFlagWatchRoot : 0)
 		
-		_lowlevel	=	EonilJustFSEventStreamWrapper(allocator: nil, callback: { (stream:ConstFSEventStreamRef, numEvents:UInt, eventPaths:UnsafeMutablePointer<Void>, eventFlags:UnsafePointer<FSEventStreamEventFlags>, eventIds:UnsafePointer<FSEventStreamEventId>) -> Void in
+		let	cb	=	{ (stream:ConstFSEventStreamRef, numEvents:Int, eventPaths:UnsafeMutablePointer<Void>, eventFlags:UnsafePointer<FSEventStreamEventFlags>, eventIds:UnsafePointer<FSEventStreamEventId>) -> Void in
 			let	ps	=	unsafeBitCast(eventPaths, NSArray.self)
 			var	a1	=	[] as [FileSystemEvent]
-			a1.reserveCapacity(Int(numEvents))
+			a1.reserveCapacity(numEvents)
 			for i in 0..<Int(numEvents) {
 				let	path	=	ps[i] as! NSString as String
 				let	flag	=	eventFlags[i]
@@ -44,7 +45,17 @@ public final class FileSystemEventMonitor {
 				a1.append(ev)
 				callback(events: a1)
 			}
-		}, pathsToWatch: pathsToWatch, sinceWhen: FSEventStreamEventId(kFSEventStreamEventIdSinceNow), latency: latency, flags: FSEventStreamCreateFlags(fs2))
+		}
+		
+		let	ps2	=	pathsToWatch.map({ $0 as NSString }) as [AnyObject]
+		
+		_lowlevel	=	EonilJustFSEventStreamWrapper(
+			allocator		:	nil,
+			callback		:	cb,
+			pathsToWatch	:	ps2,
+			sinceWhen		:	FSEventStreamEventId(kFSEventStreamEventIdSinceNow),
+			latency			:	CFTimeInterval(latency),
+			flags			:	FSEventStreamCreateFlags(fs2))
 		
 		EonilFileSystemEventFlag.UserDropped
 		_lowlevel.setDispatchQueue(_queue)
