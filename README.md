@@ -2,6 +2,7 @@ README
 ======
 2014/11/13
 2015/01/17
+2015/04/04
 Hoon H.
 
 Provides dead-simple access to `FSEvents` framework for Swift.
@@ -17,7 +18,7 @@ How To Use
 
 Here's minimal example code which waits for events and prints them. This single statement
 does everything all needed jobs to setup. Just keep the created object as long as you want
-to take receive the events.
+to receive the events.
 
 ````swift
 
@@ -76,7 +77,7 @@ when you are writing up.
 
 Note
 -----
-This project tested on OSX 10.10 with Xcode 6.3 beta 3. 
+This project tested on OSX 10.10 with Xcode 6.3 beta 4 (6D554n). 
 
 
 

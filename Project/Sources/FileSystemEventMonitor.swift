@@ -10,7 +10,8 @@ import Foundation
 
 
 
-///	:param:		events		An array of `FileSystemEvent` objects. Ordered as provided.
+///	:param:			events
+///					An array of `FileSystemEvent` objects. Ordered as provided.
 public typealias	FileSystemEventMonitorCallback	=	(events:[FileSystemEvent])->()
 public typealias	FileSystemEventFlag				=	EonilFileSystemEventFlag
 
@@ -25,7 +26,8 @@ public final class FileSystemEventMonitor {
 	
 	///	Creates a new instance with everything setup and starts immediately.
 	///
-	///	:param:		callback		Called when some events notified. See `FileSystemEventMonitorCallback` for details.
+	///	:param:		callback		
+	///				Called when some events notified. See `FileSystemEventMonitorCallback` for details.
 	public init(pathsToWatch:[String], latency:NSTimeInterval, watchRoot:Bool, queue:dispatch_queue_t, callback:FileSystemEventMonitorCallback) {
 		_queue		=	queue
 		_callback	=	callback

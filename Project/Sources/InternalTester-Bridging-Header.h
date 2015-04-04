@@ -9,3 +9,4 @@ inline NSArray*
 GetArray(void* p) {
 	return	(__bridge NSArray*)p;
 }
+

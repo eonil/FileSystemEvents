@@ -19,8 +19,8 @@ typedef void(^EonilJustFSEventStreamWrapperCallback)(ConstFSEventStreamRef strea
 
 
 /*!
- Just wrapped interface to FSEvents stream.
- Not recommended to use.
+ Thinnest wrapper around C FSEvents stream interface.
+ Not recommended to use in Swfit side.
  */
 @interface EonilJustFSEventStreamWrapper : NSObject
 - (FSEventStreamRef)raw;

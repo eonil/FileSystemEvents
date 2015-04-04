@@ -198,9 +198,9 @@
 				45D970C91A1569750037649F /* EonilFileSystemEventStream.m */,
 				45D970CA1A1569750037649F /* EonilJustFSEventStreamWrapper.h */,
 				45D970CB1A1569750037649F /* EonilJustFSEventStreamWrapper.m */,
-				45D970CC1A1569750037649F /* Info.plist */,
 				45DA95611A69DF610091410B /* InternalTester-Bridging-Header.h */,
 				45DA956B1A69E5E70091410B /* FileSystemEventMonitor.swift */,
+				45D970CC1A1569750037649F /* Info.plist */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -721,6 +721,7 @@
 				45DA95991A69F1610091410B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
