@@ -70,17 +70,12 @@ notified on specified event.
 
 Unfortunately, as Swift does not support static library target, you
 cannot link this as a library to a command-line programs currently.
-So examples had to written as AppKit application target.
+So examples had to written as an AppKit application target.
 
 For Objective-C programs, use `EonilFileSystemEventStream` class.
 Required informations are all noted as comments. This class follows
 strict Objective-C conventions, so should be straightforward.
 It is unclear how long I will keep the Objective-C version.
-
-You will get useful assertions when you compile in debug mode. 
-These kind of assertions are essential in Objective-C to build 
-robust program, so I strongly recommend to use debug mode compile
-when you are writing up.
 
 
 
@@ -88,7 +83,7 @@ when you are writing up.
 
 Note
 -----
-This project tested on OSX 10.10 with Xcode 6.3 beta 4 (6D554n). 
+This project tested on OSX 10.10 with Xcode Version 6.3.1 (6D1002). 
 
 
 
