@@ -16,6 +16,12 @@ Low level core is written in Objective-C due to lack of support from Swift.
 How To Use
 ----------
 
+First, you need to add this framework to your Xcode project.
+If you're not sure how to add this framework to your existing Xcode project, please see this
+video posting.
+
+- [A proper way to add a subproject to another Xcode project](http://eonil-observatory.tumblr.com/post/117205738262/a-proper-way-to-add-a-subproject-to-another-xcode)
+
 Here's minimal example code which waits for events and prints them. This single statement
 does everything all needed jobs to setup. Just keep the created object as long as you want
 to receive the events.
@@ -45,6 +51,11 @@ to receive the events.
 ````
 
 See `TestdriveApp` target for another fully fledged Swift example.
+
+
+
+
+
 
 
 
