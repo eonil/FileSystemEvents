@@ -22,7 +22,7 @@ video posting.
 
 - [A proper way to add a subproject to another Xcode project](http://eonil-observatory.tumblr.com/post/117205738262/a-proper-way-to-add-a-subproject-to-another-xcode)
 
-Here's minimal example code which waits for events and prints them. This single statement
+Here's a minimal example code which waits for events and prints them. This single statement
 does everything all needed jobs to setup. Just keep the created object as long as you want
 to receive the events.
 
