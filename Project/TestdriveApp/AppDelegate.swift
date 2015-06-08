@@ -25,8 +25,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource, NSTab
 	var	queue	=	dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0)
 
 	func applicationDidFinishLaunching(aNotification: NSNotification) {
-		
-		
+	}
+
+	func applicationWillTerminate(aNotification: NSNotification) {
+	}
+	
+	func applicationDidBecomeActive(notification: NSNotification) {
 		/////////////////////////////////////////////////////////////////
 		//	Here's the core of example.
 		/////////////////////////////////////////////////////////////////
@@ -48,11 +52,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource, NSTab
 		//	Here's the core of example.
 		/////////////////////////////////////////////////////////////////
 	}
-
-	func applicationWillTerminate(aNotification: NSNotification) {
-		// Insert code here to tear down your application
+	
+	func applicationWillResignActive(notification: NSNotification) {
+		monitor	=	nil
 	}
-
 	
 	func numberOfRowsInTableView(tableView: NSTableView) -> Int {
 		return	items.count
@@ -74,15 +77,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource, NSTab
 		cv1.addSubview(tv1)
 		cv1.addSubview(iv1)
 		
-		cv1.textField!.bordered			=	false
+		cv1.textField!.bordered		=	false
 		cv1.textField!.backgroundColor	=	NSColor.clearColor()
-		cv1.textField!.editable			=	false
-		(cv1.textField!.cell() as! NSCell).lineBreakMode	=	NSLineBreakMode.ByTruncatingHead
+		cv1.textField!.editable		=	false
+		cv1.textField!.lineBreakMode	=	NSLineBreakMode.ByTruncatingHead
 		
 		let	n1	=	items[row]
 		switch tableColumn!.identifier {
 		case "PATH":
-			iv1.image						=	NSWorkspace.sharedWorkspace().iconForFile(n1.path)
+			iv1.image				=	NSWorkspace.sharedWorkspace().iconForFile(n1.path)
 			cv1.textField!.stringValue		=	n1.path
 		case "TYPE":
 			cv1.textField!.stringValue		=	n1.flags

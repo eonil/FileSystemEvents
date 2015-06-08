@@ -50,7 +50,27 @@ to receive the events.
 
 ````
 
-See `TestdriveApp` target for another fully fledged Swift example.
+If you want to stop monitoring, just remove all the strong references.
+
+
+````swift
+
+	var m: FileSystemEventMonitor? = FileSystemEventMonitor( /* arguments omitted */ )
+	// Now it started.
+
+	m = nil 
+	// Now it stopped. Because it's dead. 
+
+````
+
+Please take care that object reference can be shared in Swift, so you need to ensure no 
+other object to reference the monitor object. If you're not familiar with reference-counting, 
+please see this: [Automatic Reference Counting](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html)
+
+
+
+See `TestdriveApp` target for another fully fledged Swift example. The example app starts
+monitoring when it becomes active, and stops monitoring when it becomes inactive. Try it!
 
 
 
