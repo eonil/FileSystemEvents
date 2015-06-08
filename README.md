@@ -103,7 +103,7 @@ It is unclear how long I will keep the Objective-C version.
 
 Note
 -----
-This project tested on OSX 10.10 with Xcode Version 6.3.1 (6D1002). 
+This project tested on OSX 10.10 with Xcode Version 6.3.2 (6D2105). 
 
 
 
