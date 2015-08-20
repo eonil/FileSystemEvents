@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "36160D83BA5F0FBBF1E4D427FCD25A45E887B855",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E197FC5339120FD6BBF1327A27ADC9BE16798D67" : 0,
+    "36160D83BA5F0FBBF1E4D427FCD25A45E887B855" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "522C499D-B21E-4F92-97C6-0400A28E3734",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E197FC5339120FD6BBF1327A27ADC9BE16798D67" : "..",
+    "36160D83BA5F0FBBF1E4D427FCD25A45E887B855" : "FileSystemEvents"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "EonilFSEventsOnly",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "EonilFSEventsOnly.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Eonil\/FileSystemEvents",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "36160D83BA5F0FBBF1E4D427FCD25A45E887B855"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Eonil\/Editor",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E197FC5339120FD6BBF1327A27ADC9BE16798D67"
+    }
+  ]
+}

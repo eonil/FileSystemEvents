@@ -10,23 +10,24 @@ import Foundation
 
 
 
-///	:param:			events
-///					An array of `FileSystemEvent` objects. Ordered as provided.
+
+/// - parameter events:
+///	An array of `FileSystemEvent` objects. Ordered as provided.
 public typealias	FileSystemEventMonitorCallback	=	(events:[FileSystemEvent])->()
 public typealias	FileSystemEventFlag				=	EonilFileSystemEventFlag
 
 
-///	Tailored for use with Swift.
-///	This starts monitoring automatically at creation, and stops at deallocation.
-///	This notifies all events immediately on the specified GCD queue.
+/// Tailored for use with Swift.
+/// This starts monitoring automatically at creation, and stops at deallocation.
+/// This notifies all events immediately on the specified GCD queue.
 public final class FileSystemEventMonitor {
 	public convenience init(pathsToWatch:[String], callback:FileSystemEventMonitorCallback) {
 		self.init(pathsToWatch: pathsToWatch, latency: 0, watchRoot: true, queue: dispatch_get_main_queue(), callback: callback)
 	}
 	
-	///	Creates a new instance with everything setup and starts immediately.
+	/// Creates a new instance with everything setup and starts immediately.
 	///
-	///	:param:		callback		
+	/// - parameter callback:
 	///				Called when some events notified. See `FileSystemEventMonitorCallback` for details.
 	public init(pathsToWatch:[String], latency:NSTimeInterval, watchRoot:Bool, queue:dispatch_queue_t, callback:FileSystemEventMonitorCallback) {
 		_queue		=	queue
@@ -43,7 +44,7 @@ public final class FileSystemEventMonitor {
 				let	path	=	ps[i] as! NSString as String
 				let	flag	=	eventFlags[i]
 				let	ID		=	eventIds[i]
-				let	ev		=	FileSystemEvent(path: path, flag: FileSystemEventFlag(flag), ID: ID)
+				let	ev		=	FileSystemEvent(path: path, flag: FileSystemEventFlag(rawValue: flag), ID: ID)
 				a1.append(ev)
 				callback(events: a1)
 			}
@@ -108,9 +109,9 @@ public struct FileSystemEvent {
 
 
 
-///	MARK:
+/// MARK:
 
-extension FileSystemEvent: Printable {
+extension FileSystemEvent: CustomStringConvertible {
 	public var description:String {
 		get {
 			return	"(path: \(path), flag: \(flag), ID: \(ID))"
@@ -118,7 +119,7 @@ extension FileSystemEvent: Printable {
 	}
 }
 
-extension FileSystemEventFlag: Printable {
+extension FileSystemEventFlag: CustomStringConvertible {
 	public var description:String {
 		get {
 			let	v1	=	self.rawValue
@@ -132,7 +133,7 @@ extension FileSystemEventFlag: Printable {
 				}
 			}
 			
-			let	s1	=	join(", ", a1)
+			let	s1	=	", ".join(a1)
 			return	s1
 		}
 	}
