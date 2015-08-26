@@ -132,8 +132,8 @@ extension FileSystemEventFlag: CustomStringConvertible {
 					a1.append(s)
 				}
 			}
-			
-			let	s1	=	", ".join(a1)
+
+			let	s1	=	a1.joinWithSeparator(", ")
 			return	s1
 		}
 	}
