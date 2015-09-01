@@ -17,7 +17,7 @@
                BlueprintIdentifier = "45DA957F1A69F1610091410B"
                BuildableName = "InternalTester4.app"
                BlueprintName = "InternalTester4"
-               ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
+               ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,16 +31,16 @@
                BlueprintIdentifier = "45DA958E1A69F1610091410B"
                BuildableName = "InternalTester4Tests.xctest"
                BlueprintName = "InternalTester4Tests"
-               ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
+               ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "45DA958E1A69F1610091410B"
                BuildableName = "InternalTester4Tests.xctest"
                BlueprintName = "InternalTester4Tests"
-               ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
+               ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -59,18 +59,21 @@
             BlueprintIdentifier = "45DA957F1A69F1610091410B"
             BuildableName = "InternalTester4.app"
             BlueprintName = "InternalTester4"
-            ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
+            ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
@@ -79,17 +82,17 @@
             BlueprintIdentifier = "45DA957F1A69F1610091410B"
             BuildableName = "InternalTester4.app"
             BlueprintName = "InternalTester4"
-            ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
+            ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
@@ -98,7 +101,7 @@
             BlueprintIdentifier = "45DA957F1A69F1610091410B"
             BuildableName = "InternalTester4.app"
             BlueprintName = "InternalTester4"
-            ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
+            ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

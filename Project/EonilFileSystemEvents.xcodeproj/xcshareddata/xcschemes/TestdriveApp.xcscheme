@@ -17,7 +17,7 @@
                BlueprintIdentifier = "45BF99C41A131E3A004E4E2E"
                BuildableName = "TestdriveApp.app"
                BlueprintName = "TestdriveApp"
-               ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
+               ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "45D970AF1A15690A0037649F"
                BuildableName = "EonilFileSystemEventsTests.xctest"
                BlueprintName = "EonilFileSystemEventsTests"
-               ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
+               ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -45,16 +45,16 @@
                BlueprintIdentifier = "45BF99D31A131E3A004E4E2E"
                BuildableName = "TestdriveAppTests.xctest"
                BlueprintName = "TestdriveAppTests"
-               ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
+               ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -63,7 +63,7 @@
                BlueprintIdentifier = "45D970AF1A15690A0037649F"
                BuildableName = "EonilFileSystemEventsTests.xctest"
                BlueprintName = "EonilFileSystemEventsTests"
-               ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
+               ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -73,7 +73,7 @@
                BlueprintIdentifier = "45BF99D31A131E3A004E4E2E"
                BuildableName = "TestdriveAppTests.xctest"
                BlueprintName = "TestdriveAppTests"
-               ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
+               ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -83,44 +83,49 @@
             BlueprintIdentifier = "45BF99C41A131E3A004E4E2E"
             BuildableName = "TestdriveApp.app"
             BlueprintName = "TestdriveApp"
-            ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
+            ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "45BF99C41A131E3A004E4E2E"
             BuildableName = "TestdriveApp.app"
             BlueprintName = "TestdriveApp"
-            ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
+            ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "45BF99C41A131E3A004E4E2E"
             BuildableName = "TestdriveApp.app"
             BlueprintName = "TestdriveApp"
-            ReferencedContainer = "container:Project/EonilFileSystemEvents.xcodeproj">
+            ReferencedContainer = "container:EonilFileSystemEvents.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
