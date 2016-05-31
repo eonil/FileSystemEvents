@@ -46,8 +46,8 @@ public final class FileSystemEventMonitor {
 				let	ID		=	eventIds[i]
 				let	ev		=	FileSystemEvent(path: path, flag: FileSystemEventFlag(rawValue: flag), ID: ID)
 				a1.append(ev)
-				callback(events: a1)
 			}
+			callback(events: a1)
 		}
 		
 		let	ps2	=	pathsToWatch.map({ $0 as NSString }) as [AnyObject]
