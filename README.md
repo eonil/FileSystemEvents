@@ -3,6 +3,7 @@ README
 2014/11/13
 2015/01/17
 2015/04/04
+2016/09/25
 Hoon H.
 
 Provides dead-simple access to `FSEvents` framework for Swift.
@@ -36,13 +37,13 @@ to receive the events.
 
 		@IBOutlet weak var window: NSWindow!
 		
-		let	s1		=	FileSystemEventMonitor(
+		let	s1 = FileSystemEventMonitor(
 			pathsToWatch: [
 				"~/Documents".stringByExpandingTildeInPath, 
 				"~/Temp".stringByExpandingTildeInPath],
 			latency: 1,
 			watchRoot: true,
-			queue: dispatch_get_main_queue()) { (events:[FileSystemEvent])->() in
+			queue: dispatch_get_main_queue()) { (events: [FileSystemEvent])->() in
 				println(events)
 			}
 	}
@@ -103,7 +104,7 @@ It is unclear how long I will keep the Objective-C version.
 
 Note
 -----
-This project tested on OSX 10.10 with Xcode Version 7.0.
+This library requires macOS 10.10 to run and Xcode 8.0 to build.
 
 
 
