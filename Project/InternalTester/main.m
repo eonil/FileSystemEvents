@@ -19,7 +19,7 @@ int main(int argc, const char * argv[]) {
 		s1	=	[[EonilFileSystemEventStream alloc] initWithCallback:^(NSArray *events) {
 			NSLog(@"%@", events);
 
-//			dispatch_semaphore_signal(sema1);
+			dispatch_semaphore_signal(sema1);
 		} pathsToWatch:@[@"/Users/Eonil/Documents", @"/Users/Eonil/Temp"] latency:1 watchRoot:YES queue:q1];
 
 		dispatch_semaphore_wait(sema1, DISPATCH_TIME_FOREVER);

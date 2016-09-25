@@ -22,42 +22,36 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource, NSTab
 	
 	var	items	=	[] as [Item]
 	var	monitor	=	nil as FileSystemEventMonitor?
-	var	queue	=	dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0)
+	var	queue	=	DispatchQueue.global(qos: DispatchQoS.QoSClass.background)
 
-	func applicationDidFinishLaunching(aNotification: NSNotification) {
+	func applicationDidFinishLaunching(_ aNotification: Notification) {
+        /////////////////////////////////////////////////////////////////
+        //	Here's the core of example.
+        /////////////////////////////////////////////////////////////////
+        let	onEvents	=	{ (events:[FileSystemEvent]) -> () in
+            DispatchQueue.main.async {
+                self.items.append(Item(flags: "----", path: "----"))	//	Visual separator.
+                self.tableView.insertRows(at: NSIndexSet(index: self.items.count-1) as IndexSet, withAnimation: [])
+
+                for ev in events {
+                    self.items.append(Item(flags: ev.flag.description, path: ev.path))
+                    self.tableView.insertRows(at: NSIndexSet(index: self.items.count-1) as IndexSet, withAnimation: [])
+                }
+                self.tableView.scrollToEndOfDocument(self)
+            }
+        }
+
+        monitor	=	FileSystemEventMonitor(pathsToWatch: ["/", "/Users"], latency: 0, watchRoot: false, queue: queue, callback: onEvents)
+        /////////////////////////////////////////////////////////////////
+        //	Here's the core of example.
+        /////////////////////////////////////////////////////////////////
 	}
 
-	func applicationWillTerminate(aNotification: NSNotification) {
+	func applicationWillTerminate(_ aNotification: Notification) {
+        monitor	=	nil
 	}
-	
-	func applicationDidBecomeActive(notification: NSNotification) {
-		/////////////////////////////////////////////////////////////////
-		//	Here's the core of example.
-		/////////////////////////////////////////////////////////////////
-		let	onEvents	=	{ (events:[FileSystemEvent]) -> () in
-			dispatch_async(dispatch_get_main_queue()) {
-				self.items.append(Item(flags: "----", path: "----"))	//	Visual separator.
-				self.tableView.insertRowsAtIndexes(NSIndexSet(index: self.items.count-1), withAnimation: NSTableViewAnimationOptions.EffectNone)
-				
-				for ev in events {
-					self.items.append(Item(flags: ev.flag.description, path: ev.path))
-					self.tableView.insertRowsAtIndexes(NSIndexSet(index: self.items.count-1), withAnimation: NSTableViewAnimationOptions.EffectNone)
-				}
-				self.tableView.scrollToEndOfDocument(self)
-			}
-		}
-		
-		monitor	=	FileSystemEventMonitor(pathsToWatch: ["/", "/Users"], latency: 0, watchRoot: false, queue: queue, callback: onEvents)
-		/////////////////////////////////////////////////////////////////
-		//	Here's the core of example.
-		/////////////////////////////////////////////////////////////////
-	}
-	
-	func applicationWillResignActive(notification: NSNotification) {
-		monitor	=	nil
-	}
-	
-	func numberOfRowsInTableView(tableView: NSTableView) -> Int {
+
+	func numberOfRows(in tableView: NSTableView) -> Int {
 		return	items.count
 	}
 //	func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject? {
@@ -68,7 +62,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource, NSTab
 //			default:		fatalError()
 //		}
 //	}
-	func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
+	func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
 		let	tv1	=	NSTextField()
 		let	iv1	=	NSImageView()
 		let	cv1	=	NSTableCellView()
@@ -77,18 +71,18 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource, NSTab
 		cv1.addSubview(tv1)
 		cv1.addSubview(iv1)
 		
-		cv1.textField!.bordered		=	false
-		cv1.textField!.backgroundColor	=	NSColor.clearColor()
-		cv1.textField!.editable		=	false
-		cv1.textField!.lineBreakMode	=	NSLineBreakMode.ByTruncatingHead
+		cv1.textField!.isBordered		=	false
+		cv1.textField!.backgroundColor	=	NSColor.clear
+		cv1.textField!.isEditable		=	false
+		cv1.textField!.lineBreakMode	=	NSLineBreakMode.byTruncatingHead
 		
 		let	n1	=	items[row]
 		switch tableColumn!.identifier {
 		case "PATH":
-			iv1.image				=	NSWorkspace.sharedWorkspace().iconForFile(n1.path)
-			cv1.textField!.stringValue		=	n1.path
+			iv1.image = NSWorkspace.shared().icon(forFile: n1.path)
+			cv1.textField!.stringValue = n1.path
 		case "TYPE":
-			cv1.textField!.stringValue		=	n1.flags
+			cv1.textField!.stringValue = n1.flags
 		default:
 			break
 		}

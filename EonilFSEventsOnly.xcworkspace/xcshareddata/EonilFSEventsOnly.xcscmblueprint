@@ -10,7 +10,7 @@
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "522C499D-B21E-4F92-97C6-0400A28E3734",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "E197FC5339120FD6BBF1327A27ADC9BE16798D67" : "..",
-    "36160D83BA5F0FBBF1E4D427FCD25A45E887B855" : "FileSystemEvents"
+    "36160D83BA5F0FBBF1E4D427FCD25A45E887B855" : "FileSystemEvents\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "EonilFSEventsOnly",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
