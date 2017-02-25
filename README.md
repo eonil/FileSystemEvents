@@ -106,6 +106,15 @@ Note
 -----
 This library requires macOS 10.10 to run and Xcode 8.0 to build.
 
+I also have another version of file-system watcher library.
+It's not extensively tested, but you can check it out if you're interested.
+This is clean-slated Swift3 implementation with directing binding to C API
+without Objective-C stuffs.
+
+- https://github.com/eonil/fsevents-unofficial-wrapper
+
+
+
 
 
 License
