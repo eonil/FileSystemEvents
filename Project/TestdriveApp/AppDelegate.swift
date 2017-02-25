@@ -10,58 +10,71 @@ import Cocoa
 import EonilFileSystemEvents
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource, NSTableViewDelegate {
+final class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource, NSTableViewDelegate {
 
-	@IBOutlet weak var	tableView:NSTableView!
-	@IBOutlet weak var	window:NSWindow!
+	@IBOutlet private weak var tableView:NSTableView!
+	@IBOutlet private weak var window:NSWindow!
 
-	struct Item {
-		let	flags:String
-		let	path:String
+	private struct Item {
+        let isSeparator: Bool
+		let	flags: String
+		let	path: String
 	}
 	
-	var	items	=	[] as [Item]
-	var	monitor	=	nil as FileSystemEventMonitor?
-	var	queue	=	DispatchQueue.global(qos: DispatchQoS.QoSClass.background)
+	private var	items	=	[] as [Item]
+	private var	monitor	=	nil as FileSystemEventMonitor?
+	private var	queue	=	DispatchQueue.global(qos: DispatchQoS.QoSClass.background)
 
-	func applicationDidFinishLaunching(_ aNotification: Notification) {
-        /////////////////////////////////////////////////////////////////
-        //	Here's the core of example.
-        /////////////////////////////////////////////////////////////////
-        let	onEvents	=	{ (events:[FileSystemEvent]) -> () in
-            DispatchQueue.main.async {
-                self.items.append(Item(flags: "----", path: "----"))	//	Visual separator.
-                self.tableView.insertRows(at: NSIndexSet(index: self.items.count-1) as IndexSet, withAnimation: [])
+    private func process(events: [FileSystemEvent]) {
+        items.append(Item(isSeparator: true, flags: "", path: "")) // Visual separator.
+        tableView.insertRows(at: NSIndexSet(index: self.items.count-1) as IndexSet, withAnimation: [])
 
-                for ev in events {
-                    self.items.append(Item(flags: ev.flag.description, path: ev.path))
-                    self.tableView.insertRows(at: NSIndexSet(index: self.items.count-1) as IndexSet, withAnimation: [])
-                }
-                self.tableView.scrollToEndOfDocument(self)
+        for ev in events {
+            items.append(Item(isSeparator: false, flags: ev.flag.description, path: ev.path))
+            tableView.insertRows(at: NSIndexSet(index: self.items.count-1) as IndexSet, withAnimation: [])
+
+            // You can filter out specific event like this.
+            if ev.flag.contains(.itemModified) {
+                print("Modified!: \(ev.path)")
             }
         }
+        tableView.scrollToEndOfDocument(self)
+    }
 
-        monitor	=	FileSystemEventMonitor(pathsToWatch: ["/", "/Users"], latency: 0, watchRoot: false, queue: queue, callback: onEvents)
+    @objc
+    @available(*, unavailable)
+	func applicationDidFinishLaunching(_ aNotification: Notification) {
         /////////////////////////////////////////////////////////////////
-        //	Here's the core of example.
+        //	Begin of example core.
+        /////////////////////////////////////////////////////////////////
+        let	onEvents = { (events:[FileSystemEvent]) -> () in
+            DispatchQueue.main.async { [weak self] in self?.process(events: events) }
+        }
+
+        monitor = FileSystemEventMonitor(pathsToWatch: ["/", "/Users"], latency: 0, watchRoot: false, queue: queue, callback: onEvents)
+        /////////////////////////////////////////////////////////////////
+        //	End of example core.
         /////////////////////////////////////////////////////////////////
 	}
 
+    @objc
+    @available(*, unavailable)
 	func applicationWillTerminate(_ aNotification: Notification) {
-        monitor	=	nil
+        monitor = nil
 	}
 
+    @objc
+    @available(*, unavailable)
 	func numberOfRows(in tableView: NSTableView) -> Int {
-		return	items.count
+		return items.count
 	}
-//	func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject? {
-//		let	m1	=	items[row]
-//		switch tableColumn!.identifier {
-//			case "TYPE":	return	m1.type
-//			case "PATH":	return	m1.path
-//			default:		fatalError()
-//		}
-//	}
+    @objc
+    @available(*, unavailable)
+    func tableView(_ tableView: NSTableView, shouldSelectRow row: Int) -> Bool {
+        return items[row].isSeparator == false
+    }
+    @objc
+    @available(*, unavailable)
 	func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
 		let	tv1	=	NSTextField()
 		let	iv1	=	NSImageView()
@@ -76,17 +89,19 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource, NSTab
 		cv1.textField!.isEditable		=	false
 		cv1.textField!.lineBreakMode	=	NSLineBreakMode.byTruncatingHead
 		
-		let	n1	=	items[row]
+		let	n1 = items[row]
 		switch tableColumn!.identifier {
 		case "PATH":
-			iv1.image = NSWorkspace.shared().icon(forFile: n1.path)
+            if FileManager.default.fileExists(atPath: n1.path) {
+                iv1.image = NSWorkspace.shared().icon(forFile: n1.path)
+            }
 			cv1.textField!.stringValue = n1.path
 		case "TYPE":
 			cv1.textField!.stringValue = n1.flags
 		default:
 			break
 		}
-		return	cv1
+		return cv1
 	}
 }
 
