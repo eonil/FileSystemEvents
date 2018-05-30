@@ -6,6 +6,8 @@ README
 2016/09/25
 Hoon H.
 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 Provides dead-simple access to `FSEvents` framework for Swift.
 Low level core is written in Objective-C due to lack of support from Swift.
 (lacks some flags, lacks C-callback function) 
