@@ -1,3 +1,14 @@
+ARCHIVED
+=========
+As like noted below, this project has been archived, and no longer be maintained.
+For new projects, I recommend you to use my new implementation.
+
+- https://github.com/eonil/fsevents-unofficial-wrapper
+
+
+
+
+
 README
 ======
 2014/11/13
